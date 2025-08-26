@@ -92,6 +92,7 @@ void clear_player_data(void) {
         playerData->partners[i].unk_02[1] = 0;
         playerData->partners[i].unk_02[2] = 0;
     }
+    playerData->partners[PARTNER_GOOMBARIO].enabled = TRUE;
 
     for (i = 0; i < ARRAY_COUNT(playerData->keyItems); i++) {
         playerData->keyItems[i] = ITEM_NONE;

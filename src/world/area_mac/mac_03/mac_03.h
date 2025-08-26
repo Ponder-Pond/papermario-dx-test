@@ -2,6 +2,7 @@
 /// @brief Toad Town - Station District
 
 #include "common.h"
+#include "generated.h"
 #include "message_ids.h"
 #include "map.h"
 
@@ -38,6 +39,9 @@ enum {
     NPC_LilOink_10          = 21,
     NPC_Capsule             = 22,
     NPC_ChuckQuizmo         = 23,
+    NPC_Peach,
+    NPC_Kolorado,
+    NPC_JrTroopa,
 };
 
 enum {
@@ -69,5 +73,7 @@ extern EvtScript N(EVS_ArriveFromMtRugged);
 extern EvtScript N(EVS_DepartForMtRugged);
 extern EvtScript N(EVS_InitializeLilOinks);
 extern EvtScript N(EVS_PlayDemoScene);
+extern EvtScript N(EVS_TestScene);
 
 extern NpcGroupList N(DefaultNPCs);
+extern NpcGroupList N(TestSceneNPCs);

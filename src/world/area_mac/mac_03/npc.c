@@ -1,5 +1,85 @@
 #include "mac_03.h"
 #include "effects.h"
+#include "sprite/player.h"
+
+#include "world/common/npc/Peach.inc.c"
+#include "world/common/npc/Kolorado.inc.c"
+#include "world/common/npc/JrTroopa.inc.c"
+
+EvtScript N(EVS_TestScene) = {
+    Return
+    End
+};
+
+EvtScript N(EVS_NpcInit_Peach) = {
+    Call(SetNpcAnimation, NPC_Peach, ANIM_Peach1_Idle)
+    Return
+    End
+};
+
+NpcData N(NpcData_Peach) = {
+    .id = NPC_Peach,
+    .pos = { GEN_PEACH_VEC },
+    .yaw = GEN_PEACH_DIR,
+    .init = &N(EVS_NpcInit_Peach),
+    .settings = &N(NpcSettings_Peach),
+    .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_USE_PLAYER_SPRITE,
+    .drops = NO_DROPS,
+    .animations = PEACH_ANIMS,
+};
+
+EvtScript N(EVS_NpcIdle_Kolorado) = {
+    Return
+    End
+};
+
+EvtScript N(EVS_NpcInit_Kolorado) = {
+    Call(BindNpcIdle, NPC_SELF, Ref(N(EVS_NpcIdle_Kolorado)))
+    Return
+    End
+};
+
+NpcData N(NpcData_Kolorado) = {
+    .id = NPC_Kolorado,
+    .pos = { GEN_KOLORADO_VEC },
+    .yaw = GEN_KOLORADO_DIR,
+    .init = &N(EVS_NpcInit_Kolorado),
+    .settings = &N(NpcSettings_Kolorado),
+    .flags = BASE_PASSIVE_FLAGS | ENEMY_FLAG_NO_SHADOW_RAYCAST,
+    .drops = NO_DROPS,
+    .animations = KOLORADO_ANIMS,
+    .tattle = MSG_NpcTattle_Kolorado,
+};
+
+EvtScript N(EVS_NpcIdle_JrTroopa) = {
+    Return
+    End
+};
+
+EvtScript N(EVS_NpcInit_JrTroopa) = {
+    Call(BindNpcIdle, NPC_SELF, Ref(N(EVS_NpcIdle_JrTroopa)))
+    Return
+    End
+};
+
+NpcData N(NpcData_JrTroopa) = {
+    .id = NPC_JrTroopa,
+    .pos = { GEN_JR_TROOPA_VEC },
+    .yaw = GEN_JR_TROOPA_DIR,
+    .init = &N(EVS_NpcInit_JrTroopa),
+    .settings = &N(NpcSettings_JrTroopa),
+    .flags = COMMON_PASSIVE_FLAGS | ENEMY_FLAG_DO_NOT_KILL | ENEMY_FLAG_NO_DELAY_AFTER_FLEE | ENEMY_FLAG_DO_NOT_AUTO_FACE_PLAYER,
+    .drops = NO_DROPS,
+    .animations = JR_TROOPA_ANIMS,
+    .tattle = MSG_NpcTattle_JrTroopa,
+};
+
+NpcGroupList N(TestSceneNPCs) = {
+    NPC_GROUP(N(NpcData_Peach)),
+    NPC_GROUP(N(NpcData_Kolorado)),
+    NPC_GROUP(N(NpcData_JrTroopa)),
+    {}
+};
 
 #include "world/common/npc/TrainToad.inc.c"
 #include "world/common/npc/Toad_Wander.inc.c"
