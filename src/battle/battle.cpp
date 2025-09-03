@@ -7,6 +7,7 @@
 #include "game_modes.h"
 
 #include "area/kmr_part_1/area.hpp"
+#include "area/llv/area.hpp"
 
 extern "C" {
 
@@ -113,6 +114,7 @@ BattleArea gBattleAreas[] = {
     BTL_AREA_AUX(omo2_4, "エリア ＯＭＯ２＿４"),
     BTL_AREA_AUX(omo2_5, "エリア ＯＭＯ２＿５"),
     BTL_AREA_AUX(omo2_6, "エリア ＯＭＯ２＿６"),
+    BTL_AREA(llv, "LLV"),
 };
 
 void reset_battle_status(void) {

@@ -6863,6 +6863,14 @@ segments:
     - [auto, c, script/dig_03]
     - [auto, c, script/dig_04]
     - [auto, c, script/dig_05]
+  - dir: battle/area/llv
+    type: code
+    start: auto
+    vram_class: battle_area
+    subalign: 8
+    subsegments:
+    - [auto, cpp, stage/llv_bt00]
+    - [auto, cpp, area]
 
 #######################
 ### Battle Partners ###
