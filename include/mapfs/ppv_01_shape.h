@@ -1,0 +1,26 @@
+#define MODEL_Root              0x18
+#define MODEL_Flora             0x17
+#define MODEL_CubeModel         0x16
+#define MODEL_Landmarks         0x15
+#define MODEL_Pond              0x14
+#define MODEL_Bookstand         0x13
+#define MODEL_Statue            0x12
+#define MODEL_ElderHouse        0x11
+#define MODEL_ElderHouseBase    0x10
+#define MODEL_Orphanage         0xF
+#define MODEL_OrphanageBase     0xE
+#define MODEL_BVHouse           0xD
+#define MODEL_BVHouseBase       0xC
+#define MODEL_TPHouse           0xB
+#define MODEL_TPHouseBase       0xA
+#define MODEL_Entries           0x9
+#define MODEL_SouthEntrySides   0x8
+#define MODEL_SouthEntryFloor   0x7
+#define MODEL_Walls             0x6
+#define MODEL_EastWall          0x5
+#define MODEL_WestWall          0x4
+#define MODEL_NorthWall         0x3
+#define MODEL_Floor             0x2
+#define MODEL_Staircase         0x1
+#define MODEL_Floor             0x0
+
