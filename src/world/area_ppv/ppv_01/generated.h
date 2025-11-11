@@ -95,7 +95,7 @@
 
 // type: Marker:NPC
 // name: Nibbella
-// anim: ANIM_SmallPiranha_Anim01
+// anim: ANIM_Nipper_Pink_Idle
 #define GEN_NIBBELLA_X 625
 #define GEN_NIBBELLA_Y 0
 #define GEN_NIBBELLA_Z 1150
@@ -106,7 +106,7 @@
 
 // type: Marker:NPC
 // name: Nibby
-// anim: ANIM_SmallPiranha_Anim01
+// anim: ANIM_Nipper_Pink_Idle
 #define GEN_NIBBY_X 625
 #define GEN_NIBBY_Y 0
 #define GEN_NIBBY_Z 1100
@@ -117,7 +117,7 @@
 
 // type: Marker:NPC
 // name: Chomsy
-// anim: ANIM_SmallPiranha_Anim01
+// anim: ANIM_Muncher_Idle
 #define GEN_CHOMSY_X 750
 #define GEN_CHOMSY_Y 0
 #define GEN_CHOMSY_Z 550
@@ -128,7 +128,7 @@
 
 // type: Marker:NPC
 // name: Florin
-// anim: ANIM_SmallPiranha_Anim01
+// anim: ANIM_Nipper_Pink_Idle
 #define GEN_FLORIN_X 0
 #define GEN_FLORIN_Y 0
 #define GEN_FLORIN_Z 250
@@ -139,7 +139,7 @@
 
 // type: Marker:NPC
 // name: Prickle
-// anim: ANIM_SmallPiranha_Anim01
+// anim: ANIM_Muncher_Idle
 #define GEN_PRICKLE_X 1500
 #define GEN_PRICKLE_Y 0
 #define GEN_PRICKLE_Z 1400
@@ -150,7 +150,7 @@
 
 // type: Marker:NPC
 // name: Dandil
-// anim: ANIM_SmallPiranha_Anim01
+// anim: ANIM_Nipper_Idle
 #define GEN_DANDIL_X 1400
 #define GEN_DANDIL_Y 0
 #define GEN_DANDIL_Z 500
